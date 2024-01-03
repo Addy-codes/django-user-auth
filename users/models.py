@@ -12,7 +12,7 @@ class Profile(models.Model):
     # lastname = models.CharField(max_length = 80, blank = True)
     # email = models.CharField(max_length = 200, blank = True)
     age = models.PositiveIntegerField(null=True, blank=True)    
-    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    profile_picture = models.ImageField(default='default.png',upload_to='profile_pics/', blank=True, null=True)
     bio = models.TextField(max_length=500, blank=True)
     contact_number = models.CharField(max_length=15, blank=True)
     address = models.TextField(max_length=300, blank=True)
