@@ -1,8 +1,9 @@
 {% extends "users/base.html" %}
 {% block title %}Profile Page{% endblock title %}
 {% block content %}
-{% load static %} 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/styles3.css' %}">
 <div class="row my-3 p-3">
     <img class="rounded-circle account-img" src="{{ user.profile.profile_picture.url }} " style="cursor: pointer;" />
@@ -31,12 +32,12 @@
                     {{ user_form.email }}
                 </div>
                 <div class="form-group">
-                    <a href="#">Change Password</a>
+                    <!-- <a href="#">Change Password</a> -->
                     <hr>
                     <label class="small mb-1">Change Profile Picture:</label>
                     {{ profile_form.profile_picture }}
                 </div>
-                <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
+                <label class="small mb-1">About me!:</label> {{ profile_form.bio }}
             </div>
         </div>
         <br><br>

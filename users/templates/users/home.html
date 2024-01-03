@@ -1,22 +1,21 @@
 {% extends "users/base.html" %}
 {% block title %} Home Page {% endblock title %}
 {% block content %}
-{% load static %} 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <div class="jumbotron jumbotron-fluid bg-light shadow-sm p-4 mb-4">
     <div class="container">
         <h1 class="display-4">Welcome {{ user.username }}</h1>
         <p class="lead">
-            This is a <b>user registration and login system</b> built with Django,
-            a Python-based free and open-source web framework that follows the
-            model–template–views architectural pattern.
+            This is a <b>user registration and login system</b> built with Django
         </p>
         <hr class="my-4">
-        <p>Explore our features and join our community.</p>
         <div class="d-flex justify-content-start">
             <p class="lead">
                 {% if user.is_authenticated %}
+                <a class="btn btn-primary btn-lg" href="{% url 'users-profile' %}" role="button">Profile</a>
                 <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Logout</a>
                 {% else %}
                 <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign in</a>

@@ -2,9 +2,12 @@
 
 /* Apply a background color to the body */
 body {
-    background-color: #f0f8ff; /* Alice Blue background color */
-    font-family: 'Arial', sans-serif; /* Change the font family */
-    margin: 0; /* Remove default margin */
+    background-color: #f0f8ff;
+    /* Alice Blue background color */
+    font-family: 'Arial', sans-serif;
+    /* Change the font family */
+    margin: 0;
+    /* Remove default margin */
 }
 
 /* Center the content vertically and horizontally */
@@ -14,60 +17,75 @@ body {
     margin-top: 5%;
     justify-content: center;
     align-items: center;
-    height: 70vh; /* 70% viewport height */
-    background-color: #ffffff; /* White background color for the container */
-    border-radius: 10px; /* Add a subtle border-radius for a cleaner look */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect for the container */
+    height: 70vh;
+    /* 70% viewport height */
+    background-color: #ffffff;
+    /* White background color for the container */
+    border-radius: 10px;
+    /* Add a subtle border-radius for a cleaner look */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    /* Shadow effect for the container */
 }
 
 /* Style the jumbotron */
 .jumbotron {
-    background-color: rgba(248, 249, 250, 0.8); /* Light gray background color with 0.8 opacity */
-    padding: 30px; /* Increased padding for a more spacious feel */
-    border-radius: 15px; /* Rounded corners for a softer look */
+    background-color: rgba(248, 249, 250, 0.8);
+    /* Light gray background color with 0.8 opacity */
+    padding: 30px;
+    /* Increased padding for a more spacious feel */
+    border-radius: 15px;
+    /* Rounded corners for a softer look */
     text-align: center;
 }
 
 /* Style the welcome heading */
 .display-4 {
-    color: #ff6347; /* Tomato color */
-    font-weight: bold; /* Make the text bold */
-    margin-bottom: 15px; /* Add space below the heading */
+    color: #ff6347;
+    /* Tomato color */
+    font-weight: bold;
+    /* Make the text bold */
+    margin-bottom: 15px;
+    /* Add space below the heading */
 }
 
 /* Style the lead paragraph */
 .lead {
-    color: #555; /* Slightly darker gray color */
-    font-size: 18px; /* Slightly larger font size */
-    margin-bottom: 20px; /* Add space below the lead paragraph */
+    color: #555;
+    /* Slightly darker gray color */
+    font-size: 18px;
+    /* Slightly larger font size */
+    margin-bottom: 20px;
+    /* Add space below the lead paragraph */
 }
 
 /* Style the primary button */
 .btn-primary {
-    background-color: #008080; /* Teal color */
-    border-color: #008080; /* Teal color */
-    padding: 10px 20px; /* Increase padding for a more prominent button */
-    font-size: 16px; /* Increase font size */
+    background-color: #008080;
+    /* Teal color */
+    border-color: #008080;
+    /* Teal color */
+    padding: 10px 20px;
+    /* Increase padding for a more prominent button */
+    font-size: 16px;
+    /* Increase font size */
 }
 
 /* Style the secondary button */
 .btn-outline-primary {
-    color: #008080; /* Teal color */
-    border-color: #008080; /* Teal color */
-    padding: 10px 20px; /* Increase padding for a more prominent button */
-    font-size: 16px; /* Increase font size */
+    color: #008080;
+    /* Teal color */
+    border-color: #008080;
+    /* Teal color */
+    padding: 10px 20px;
+    /* Increase padding for a more prominent button */
+    font-size: 16px;
+    /* Increase font size */
 }
 
 /* Add hover effect to buttons */
 .btn:hover,
 .btn:active,
 .btn:focus {
-    filter: brightness(90%); /* Slight brightness increase on hover for a subtle effect */
-}
-
-/* Add background image */
-body {
-    background-image: url('your-image-path.jpg'); /* Replace with the path to your background image */
-    background-size: cover;
-    background-position: center;
+    filter: brightness(90%);
+    /* Slight brightness increase on hover for a subtle effect */
 }

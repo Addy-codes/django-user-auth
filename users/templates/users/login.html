@@ -1,8 +1,9 @@
 {% extends "users/base.html" %}
 {% block title %} Login Page {% endblock title%}
 {% block content %}
-{% load static %} 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css"
+    integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/styles1.css' %}">
 <div class="form-content my-3 p-3">
     <div class="container">
@@ -35,7 +36,7 @@
                                         <hr>
                                         <p class="text-center"><strong>OR</strong></p>
                                         <hr> -->
-                                        <label class="small mb-1">Username</label>
+                                        <!-- <label class="small mb-1">Username or Email</label> -->
                                         {{ form.username }}
                                     </div>
                                 </div>
@@ -43,7 +44,7 @@
                             <div class="form-row">
                                 <div class="col-md-10 offset-md-1">
                                     <div class="form-group">
-                                        <label class="small mb-1">Password</label>
+                                        <!-- <label class="small mb-1">Password</label> -->
                                         {{ form.password }}
                                     </div>
                                 </div>
@@ -69,7 +70,7 @@
                     <div class="card-footer text-center">
                         <div class="small">
                             <a href="{% url 'users-register' %}">Don't have an account yet? Go to signup</a><br>
-                            <a href="#"><i>Forgot Password?</i></a>
+                            <!-- <a href="#"><i>Forgot Password?</i></a> -->
                         </div>
                     </div>
                 </div>
