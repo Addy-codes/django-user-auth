@@ -1,6 +1,9 @@
 {% extends "users/base.html" %}
 {% block title %} Home Page {% endblock title %}
 {% block content %}
+{% load static %} 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 <div class="jumbotron jumbotron-fluid bg-light shadow-sm p-4 mb-4">
     <div class="container">
         <h1 class="display-4">Welcome {{ user.username }}</h1>

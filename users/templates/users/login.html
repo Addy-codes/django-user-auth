@@ -1,13 +1,16 @@
 {% extends "users/base.html" %}
 {% block title %} Login Page {% endblock title%}
 {% block content %}
+{% load static %} 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha384-oZ8wz9pe4uP0FRL5S2fKfr4F2WJAVbYx4+MHAfS+gcXsQUlAA+P9UfAeg+d5P8J" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/styles1.css' %}">
 <div class="form-content my-3 p-3">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <div class="card shadow-lg border-0 rounded-lg mt-0 mb-3">
                     <div class="card-header justify-content-center">
-                        <h3 class="font-weight-light my-1 text-center">Sign In</h3>
+                        <h3 class="font-weight-light my-1 text-center">SIGN IN</h3>
                     </div>
                     {% if form.errors %}
                     <div class="alert alert-danger alert-dismissible" role="alert">

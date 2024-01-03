@@ -17,38 +17,86 @@
     <title>{% block title %} {% endblock %} </title>
     <!-- Custom CSS -->
     <style>
-        .navbar-custom {
-            background-color: #e3f2fd;
-            /* Lighter blue background */
+        body {
+            padding-top: 56px;
+            /* Adjust based on the height of your navbar */
         }
-
+    
+        .navbar-custom {
+            background-color: #3498db;
+            /* Blue color */
+            border-bottom: 4px solid #2980b9;
+            /* Slightly darker blue border */
+        }
+    
         .navbar-custom .navbar-brand,
         .navbar-custom .nav-link {
-            color: #0d6efd;
-            /* Slightly darker blue for text */
+            color: white;
+            /* Light gray text color */
+            font-weight: bold;
+            /* Use a bold font */
+            font-family: 'Arial', sans-serif;
+            /* Use a professional font family */
+            font-size: 20px;
+            /* Set the font size as needed */
+        }
+    
+        .navbar-custom .navbar-toggler-icon {
+            background-color: #ecf0f1;
+            /* Light gray toggler icon color */
+        }
+    
+        .navbar-custom .navbar-toggler {
+            border-color: #ecf0f1;
+            /* Light gray toggler border color */
+        }
+    
+        .navbar-custom .navbar-toggler:hover,
+        .navbar-custom .navbar-toggler:focus {
+            background-color: #2980b9;
+            /* Slightly darker blue on hover/focus */
+        }
+    
+        .navbar-custom .nav-link:hover,
+        .navbar-custom .nav-link:focus {
+            color: #fff;
+            /* White text color on hover/focus */
         }
     </style>
 </head>
 
 <body>
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users-profile' %}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Sign in</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+
     <div class="container p-3 my-3">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-expand-md navbar-custom">
-                    <a href="/" class="navbar-brand">Home</a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <div class="navbar-nav ml-auto">
-                            {% if user.is_authenticated %}
-                            <a href="{% url 'users-profile' %}" class="nav-item nav-link">Profile</a>
-                            <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
-                            {% else %}
-                            <a href="{% url 'login' %}" class="nav-item nav-link">Sign in</a>
-                            {% endif %}
-                        </div>
-                </nav>
+                <!-- Your content goes here -->
+
                 <!--Error Messages will flash here!-->
                 {% if messages %}
                 <div class="alert alert-dismissible" role="alert">
@@ -75,10 +123,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- A plugin for password show/hide  -->
-    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
-
-
 </body>
 
 </html>

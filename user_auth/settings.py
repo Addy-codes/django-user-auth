@@ -64,7 +64,7 @@ ROOT_URLCONF = "user_auth.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR,'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -75,6 +75,12 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+# Custom authentication backends
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+    'users.backends.EmailOrUsernameModelBackend',  # Custom backend to authenticate with username or email
 ]
 
 WSGI_APPLICATION = "user_auth.wsgi.application"
@@ -125,3 +131,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]

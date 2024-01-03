@@ -1,0 +1,93 @@
+/* styles2.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #f0f0f0; /* Set a neutral background color */
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background: linear-gradient(to right bottom, #4e54c8, #8f94fb);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px ;
+}
+
+.card {
+    border-radius: 10px;
+  
+}
+
+.card-header {
+    background: linear-gradient(to right bottom, #4e54c8, #8f94fb);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #f0f0f0;
+    
+}
+
+.card-body {
+    padding: 30px;
+    
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    position: absolute;
+    top: 10px; /* Adjust the top spacing as needed */
+    left: 10px; /* Adjust the left spacing as needed */
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+input:focus,
+input:valid {
+    border-bottom: 1px solid #fff;
+}
+
+/* Animation */
+input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Button Style */
+.btn-dark {
+    background: linear-gradient(to right bottom, #4e54c8, #8f94fb);
+    border: none;
+}
+
+.btn-dark:hover {
+    background: linear-gradient(to right bottom, #4e54c8, #8f94fb);
+    opacity: 0.8;
+}

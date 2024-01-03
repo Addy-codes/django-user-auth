@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: #f0f0f0; /* Set a neutral background color */
+}
+
+.container {
+    background: linear-gradient(to right bottom, #43cea2, #185a9d);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    background: linear-gradient(to right bottom, #43cea2, #185a9d);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #f0f0f0;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+input:focus,
+input:valid {
+    border-bottom: 1px solid #fff;
+}
+
+/* Animation */
+input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Button Style */
+.btn-dark {
+    background: linear-gradient(to right bottom, #43cea2, #185a9d);
+    border: none;
+}
+
+.btn-dark:hover {
+    background: linear-gradient(to right bottom, #43cea2, #185a9d);
+    opacity: 0.8;
+}
