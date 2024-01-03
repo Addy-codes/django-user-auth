@@ -22,7 +22,7 @@ Below are some snapshots of the application in action:
 
 
 
-### Sign Up Page
+### Sign Up / Register Page
 ![image](https://github.com/Addy-codes/django-user-auth/assets/72205091/8668b4ec-23f2-4845-a344-212d3bbeb203)
 
 
