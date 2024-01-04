@@ -21,14 +21,14 @@
             padding-top: 56px;
             /* Adjust based on the height of your navbar */
         }
-    
+
         .navbar-custom {
             background-color: #3498db;
             /* Blue color */
             border-bottom: 4px solid #2980b9;
             /* Slightly darker blue border */
         }
-    
+
         .navbar-custom .navbar-brand,
         .navbar-custom .nav-link {
             color: white;
@@ -40,23 +40,23 @@
             font-size: 20px;
             /* Set the font size as needed */
         }
-    
+
         .navbar-custom .navbar-toggler-icon {
             background-color: #ecf0f1;
             /* Light gray toggler icon color */
         }
-    
+
         .navbar-custom .navbar-toggler {
             border-color: #ecf0f1;
             /* Light gray toggler border color */
         }
-    
+
         .navbar-custom .navbar-toggler:hover,
         .navbar-custom .navbar-toggler:focus {
             background-color: #2980b9;
             /* Slightly darker blue on hover/focus */
         }
-    
+
         .navbar-custom .nav-link:hover,
         .navbar-custom .nav-link:focus {
             color: #fff;
@@ -85,6 +85,9 @@
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users-register' %}">Sign Up</a>
                     </li>
                     {% endif %}
                 </ul>

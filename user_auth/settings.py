@@ -36,6 +36,8 @@ LOGIN_URL = 'login'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+ROOT_URLCONF = "user_auth.urls"
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -58,8 +60,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
-ROOT_URLCONF = "user_auth.urls"
 
 TEMPLATES = [
     {
