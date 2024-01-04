@@ -10,7 +10,6 @@ This project is a Django-based web application implementing a user authenticatio
 - **User Profile**: A basic profile page displaying user information. This page is accessible only to logged-in users.
 - **Logout Functionality**: Users can log out of the application, which redirects them back to the login page.
 - **Built-in Authentication**: Uses Django's built-in authentication system for handling user registration, login, and logout processes.
-- 
 
 ## Snapshots
 
